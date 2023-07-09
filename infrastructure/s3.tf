@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "dl" {
+resource "aws_s3_bucket" "buckets" {
   bucket = "datalake-mso-xpe-edc-tf"
   acl    = "private"
 
