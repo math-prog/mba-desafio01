@@ -24,6 +24,6 @@ resource "aws_s3_bucket_acl" "this" {
 resource "aws_s3_bucket_ownership_controls" "this" {
   bucket = "datalake-mso-xpe-edc-tf"
   rule{
-    object_ownership = "BucketOwnerPreferred"
+    object_ownership = "ObjectWriter"
   }
 }
