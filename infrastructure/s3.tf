@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "dl" {
   }
 }
 
-resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
+resource "aws_s3_bucket_server_side_encryption_configuration" "dl" {
   bucket = "datalake-mso-xpe-edc-tf"
   rule {
     apply_server_side_encryption_by_default {
@@ -16,12 +16,12 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "this" {
   }
 }
 
-resource "aws_s3_bucket_acl" "this" {
+resource "aws_s3_bucket_acl" "dl" {
   bucket = "datalake-mso-xpe-edc-tf"
   acl    = "private"
 }
 
-resource "aws_s3_bucket_ownership_controls" "this" {
+resource "aws_s3_bucket_ownership_controls" "dl" {
   bucket = "datalake-mso-xpe-edc-tf"
   rule{
     object_ownership = "ObjectWriter"
